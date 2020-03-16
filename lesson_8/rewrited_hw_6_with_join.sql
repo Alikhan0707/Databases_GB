@@ -3,7 +3,8 @@ SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 --Задание №2
 
 SELECT 
-  users.id, 
+  users.id,
+  likes.target_type_id, 
   CONCAT(first_name, ' ', last_name) AS owner,
   TIMESTAMPDIFF(YEAR, profiles.birthday, NOW()) AS age,
   COUNT(likes.id) AS total_likes
@@ -12,6 +13,7 @@ SELECT
       ON users.id = profiles.user_id 
     JOIN likes
       ON profiles.user_id = likes.target_id
+  WHERE likes.target_type_id = 2
   GROUP BY users.id
   ORDER BY age, total_likes DESC
   LIMIT 10;
@@ -31,17 +33,17 @@ SELECT
 
 SELECT 
   users.id,
-  CONCAT(first_name, ' ', last_name),
+  CONCAT(first_name, ' ', last_name) AS owner,
   MIN(TIMESTAMPDIFF(DAY, likes.created_at, NOW())) AS last_like,
   MIN(TIMESTAMPDIFF(DAY, messages.created_at, NOW())) AS last_message
   FROM users
-    JOIN profiles 
+    RIGHT JOIN profiles 
       ON users.id = profiles.user_id
-    JOIN likes 
+    RIGHT JOIN likes 
       ON profiles.user_id = likes.user_id
-    JOIN messages 
+    RIGHT JOIN messages 
       ON profiles.user_id = messages.from_user_id
-  GROUP BY users.id
+  GROUP BY likes.user_id
   ORDER BY last_like DESC, last_message DESC;
  
-
+SELECT * FROM likes;
