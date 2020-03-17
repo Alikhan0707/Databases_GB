@@ -1,5 +1,5 @@
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
-
+USE vk;
 --Задание №2
 
 SELECT 
@@ -15,7 +15,7 @@ SELECT
       ON profiles.user_id = likes.target_id
   WHERE likes.target_type_id = 2
   GROUP BY users.id
-  ORDER BY age, total_likes DESC
+  ORDER BY age, total_likes
   LIMIT 10;
 
 --Задание №3
@@ -37,13 +37,14 @@ SELECT
   MIN(TIMESTAMPDIFF(DAY, likes.created_at, NOW())) AS last_like,
   MIN(TIMESTAMPDIFF(DAY, messages.created_at, NOW())) AS last_message
   FROM users
-    RIGHT JOIN profiles 
+    LEFT JOIN profiles 
       ON users.id = profiles.user_id
-    RIGHT JOIN likes 
+    LEFT JOIN likes 
       ON profiles.user_id = likes.user_id
-    RIGHT JOIN messages 
+    LEFT JOIN messages 
       ON profiles.user_id = messages.from_user_id
   GROUP BY likes.user_id
-  ORDER BY last_like DESC, last_message DESC;
+  ORDER BY last_like DESC, last_message DESC
+  LIMIT 10;
  
 SELECT * FROM likes;
