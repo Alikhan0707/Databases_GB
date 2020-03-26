@@ -1,0 +1,85 @@
+[
+{ 
+    "_id" : "processors", 
+    "catalogName" : "Процессоры"
+},
+{ 
+    "_id" : "motherboards", 
+    "catalogName" : "Материнские платы"
+},
+{ 
+    "_id" : "video_cards", 
+    "catalogName" : "Видеокарты"
+},
+{ 
+    "_id" : "hard_drives", 
+    "catalogName" : "Жесткие диски"
+},
+{ 
+    "_id" : "RAM", 
+    "catalogName" : "Оперативная память"
+},
+{ 
+    "_id" : ObjectId("5e7c5406fc3ce258fe92cee2"), 
+    "productName" : "Intel Core i3-8100", 
+    "description" : "Процессор для настольных персональных компьютеров, основанных на платформе Intel.", 
+    "price" : "7890.00", 
+    "catalog_id" : "processors", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:04:38.462+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c544ffc3ce258fe92cee3"), 
+    "productName" : "Intel Core i5-7400", 
+    "description" : "Процессор для настольных персональных компьютеров, основанных на платформе Intel.", 
+    "price" : "12700.00", 
+    "catalog_id" : "processors", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:05:51.753+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c54f6fc3ce258fe92cee4"), 
+    "productName" : "AMD FX-8320E", 
+    "description" : "Процессор для настольных персональных компьютеров, основанных на платформе AMD", 
+    "price" : "4780.00", 
+    "catalog_id" : "processors", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:08:38.401+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c5516fc3ce258fe92cee5"), 
+    "productName" : "AMD FX-8320", 
+    "description" : "Процессор для настольных персональных компьютеров, основанных на платформе AMD", 
+    "price" : "7120.00", 
+    "catalog_id" : "processors", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:09:10.948+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c5557fc3ce258fe92cee6"), 
+    "productName" : "ASUS ROG MAXIMUS X HERO", 
+    "description" : "Материнская плата ASUS ROG MAXIMUS X HERO, Z370, Socket 1151-V2, DDR4, ATX", 
+    "price" : "19310.00", 
+    "catalog_id" : "motherboards", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:10:15.919+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c5584fc3ce258fe92cee7"), 
+    "productName" : "Gigabyte H310M S2H", 
+    "description" : "Материнская плата Gigabyte H310M S2H, H310, Socket 1151-V2, DDR4, mATX", 
+    "price" : "4790.00", 
+    "catalog_id" : "motherboards", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:11:00.273+0000")
+},
+{ 
+    "_id" : ObjectId("5e7c55b7fc3ce258fe92cee8"), 
+    "productName" : "MSI B250M GAMING PRO", 
+    "description" : "Материнская плата MSI B250M GAMING PRO, B250, Socket 1151, DDR4, mATX", 
+    "price" : "5060.00", 
+    "catalog_id" : "motherboards", 
+    "created_at" : "2020-03-12 07:08:47", 
+    "updated_at" : ISODate("2020-03-26T07:11:51.445+0000")
+}
+]

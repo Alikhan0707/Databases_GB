@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \uc0\u1047 \u1072 \u1076 \u1072 \u1085 \u1080 \u1077  \u8470 2.1\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 127.0.0.1:6379> SADD ip 192.168.4.104\
+(integer) 1\
+127.0.0.1:6379> SADD ip 192.168.4.105\
+(integer) 1\
+127.0.0.1:6379> SADD ip 192.168.4.106\
+(integer) 1\
+127.0.0.1:6379> SCARD ip\
+(integer) 3
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\uc0\u1047 \u1072 \u1076 \u1072 \u1085 \u1080 \u1077  \u8470 2.2\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 127.0.0.1:6379> HSET users name '1'st user'\
+Invalid argument(s)\
+127.0.0.1:6379> HSET users name "1'st user"\
+(integer) 1\
+127.0.0.1:6379> HSET users email "1st_user@mail.ru"\
+(integer) 1\
+127.0.0.1:6379> HGET users name\
+"1'st user"\
+127.0.0.1:6379> HGET users email\
+"1st_user@mail.ru"
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\uc0\u1047 \u1072 \u1076 \u1072 \u1085 \u1080 \u1077  \u8470 2.3\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 > use shop\
+switched to db shop\
+> db.shop.insert(\{_id: 'processors', catalogName: '\uc0\u1055 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1088 \u1099 '\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{_id: 'motherboards', catalogName: '\uc0\u1052 \u1072 \u1090 \u1077 \u1088 \u1080 \u1085 \u1089 \u1082 \u1080 \u1077  \u1087 \u1083 \u1072 \u1090 \u1099 '\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{_id: 'video_cards', catalogName: '\uc0\u1042 \u1080 \u1076 \u1077 \u1086 \u1082 \u1072 \u1088 \u1090 \u1099 '\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{_id: 'hard_drives', catalogName: '\uc0\u1046 \u1077 \u1089 \u1090 \u1082 \u1080 \u1077  \u1076 \u1080 \u1089 \u1082 \u1080 '\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{_id: 'RAM', catalogName: '\uc0\u1054 \u1087 \u1077 \u1088 \u1072 \u1090 \u1080 \u1074 \u1085 \u1072 \u1103  \u1087 \u1072 \u1084 \u1103 \u1090 \u1100 '\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'Intel Core i3-8100', description: '\uc0\u1055 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1088  \u1076 \u1083 \u1103  \u1085 \u1072 \u1089 \u1090 \u1086 \u1083 \u1100 \u1085 \u1099 \u1093  \u1087 \u1077 \u1088 \u1089 \u1086 \u1085 \u1072 \u1083 \u1100 \u1085 \u1099 \u1093  \u1082 \u1086 \u1084 \u1087 \u1100 \u1102 \u1090 \u1077 \u1088 \u1086 \u1074 , \u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1093  \u1085 \u1072  \u1087 \u1083 \u1072 \u1090 \u1092 \u1086 \u1088 \u1084 \u1077  Intel.', price: '7890.00', catalog_id: 'processors', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'Intel Core i5-7400', description: '\uc0\u1055 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1088  \u1076 \u1083 \u1103  \u1085 \u1072 \u1089 \u1090 \u1086 \u1083 \u1100 \u1085 \u1099 \u1093  \u1087 \u1077 \u1088 \u1089 \u1086 \u1085 \u1072 \u1083 \u1100 \u1085 \u1099 \u1093  \u1082 \u1086 \u1084 \u1087 \u1100 \u1102 \u1090 \u1077 \u1088 \u1086 \u1074 , \u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1093  \u1085 \u1072  \u1087 \u1083 \u1072 \u1090 \u1092 \u1086 \u1088 \u1084 \u1077  Intel.', price: '12700.00', catalog_id: 'processors', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'AMD FX-8320E', description: '\uc0\u1055 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1088  \u1076 \u1083 \u1103  \u1085 \u1072 \u1089 \u1090 \u1086 \u1083 \u1100 \u1085 \u1099 \u1093  \u1087 \u1077 \u1088 \u1089 \u1086 \u1085 \u1072 \u1083 \u1100 \u1085 \u1099 \u1093  \u1082 \u1086 \u1084 \u1087 \u1100 \u1102 \u1090 \u1077 \u1088 \u1086 \u1074 , \u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1093  \u1085 \u1072  \u1087 \u1083 \u1072 \u1090 \u1092 \u1086 \u1088 \u1084 \u1077  AMD', price: '4780.00', catalog_id: 'processors', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'AMD FX-8320', description: '\uc0\u1055 \u1088 \u1086 \u1094 \u1077 \u1089 \u1089 \u1086 \u1088  \u1076 \u1083 \u1103  \u1085 \u1072 \u1089 \u1090 \u1086 \u1083 \u1100 \u1085 \u1099 \u1093  \u1087 \u1077 \u1088 \u1089 \u1086 \u1085 \u1072 \u1083 \u1100 \u1085 \u1099 \u1093  \u1082 \u1086 \u1084 \u1087 \u1100 \u1102 \u1090 \u1077 \u1088 \u1086 \u1074 , \u1086 \u1089 \u1085 \u1086 \u1074 \u1072 \u1085 \u1085 \u1099 \u1093  \u1085 \u1072  \u1087 \u1083 \u1072 \u1090 \u1092 \u1086 \u1088 \u1084 \u1077  AMD', price: '7120.00', catalog_id: 'processors', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'ASUS ROG MAXIMUS X HERO', description: '\uc0\u1052 \u1072 \u1090 \u1077 \u1088 \u1080 \u1085 \u1089 \u1082 \u1072 \u1103  \u1087 \u1083 \u1072 \u1090 \u1072  ASUS ROG MAXIMUS X HERO, Z370, Socket 1151-V2, DDR4, ATX', price: '19310.00', catalog_id: 'motherboards', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'Gigabyte H310M S2H', description: '\uc0\u1052 \u1072 \u1090 \u1077 \u1088 \u1080 \u1085 \u1089 \u1082 \u1072 \u1103  \u1087 \u1083 \u1072 \u1090 \u1072  Gigabyte H310M S2H, H310, Socket 1151-V2, DDR4, mATX', price: '4790.00', catalog_id: 'motherboards', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})\
+> db.shop.insert(\{productName: 'MSI B250M GAMING PRO', description: '\uc0\u1052 \u1072 \u1090 \u1077 \u1088 \u1080 \u1085 \u1089 \u1082 \u1072 \u1103  \u1087 \u1083 \u1072 \u1090 \u1072  MSI B250M GAMING PRO, B250, Socket 1151, DDR4, mATX', price: '5060.00', catalog_id: 'motherboards', created_at: '2020-03-12 07:08:47', updated_at: new Date()\})\
+WriteResult(\{ "nInserted" : 1 \})}
